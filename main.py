@@ -27,10 +27,10 @@ import pandas as pd
 from bs4 import BeautifulSoup
 
 def tem():
-    m= r'C:\Users\MRMINH\Desktop\BOOT TELEGRAM\data.csv'
+    m= 'data.csv'
     df_data = pd.read_csv(m)
     # pd.set_option('display.max_rows')
-    # print(df_data)    
+    print(df_data)    
     # print(type(df_data))
 
     minh = [df_data]
@@ -41,7 +41,7 @@ def tem():
 # print(tem())
 
 async def hello(update: Update, context: ContextTypes.context) -> None:
-    await update.message.reply_text(f'Em chào anh minh {update.effective_user.first_name}')
+    await update.message.reply_text(f'Em chào đại ka {update.effective_user.first_name}')
 
 async def news(update: Update, context: ContextTypes.context) -> None:
     data = tem()
